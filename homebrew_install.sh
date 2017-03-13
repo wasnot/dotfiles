@@ -55,6 +55,8 @@ formulas=(
 #brew tap homebrew/homebrew-php
 #brew tap homebrew/apache
 #brew tap sanemat/font
+brew tap homebrew/science
+brew tap homebrew/fuse
 
 echo "start brew install apps..."
 for formula in "${formulas[@]}"; do
@@ -67,8 +69,12 @@ casks=(
 #    skitch
     google-chrome
     firefox
+    appcleaner
+    google-drive
+    toggldesktop
+    hyperswitch
 
-    slack
+#    slack
     skype
     zeplin
 
@@ -83,9 +89,10 @@ casks=(
     android-studio
     genymotion
 
-    pycharm
-    appengine
+    pycharm-ce
+    googleappengine
     gogland-eap
+    osxfuse
 )
 
 echo "start brew cask install apps..."

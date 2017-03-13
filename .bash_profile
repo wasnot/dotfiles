@@ -25,15 +25,6 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source /usr/local/bin/virtualenvwrapper.sh
 fi
 
-# The next line updates PATH for the Google Cloud SDK.
-source "$HOME/Documents/gcp/sdk/google-cloud-sdk/path.bash.inc"
-
-# The next line enables shell command completion for gcloud.
-source "$HOME/Documents/gcp/sdk/google-cloud-sdk/completion.bash.inc"
-# go_appengine
-export PATH=$PATH:$HOME/Documents/gcp/sdk/go_appengine
-
-
 # rbenv
 eval "$(rbenv init -)"
 
@@ -42,8 +33,8 @@ eval "$(rbenv init -)"
 #PATH=${JAVA_HOME}/bin:${PATH}
 
 # jEnv
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
+#export PATH="$HOME/.jenv/bin:$PATH"
+#eval "$(jenv init -)"
 
 # swiftenv
 if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
@@ -62,3 +53,13 @@ ssh-add -K $HOME/.ssh/wasnot/id_rsa 2>/dev/null
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
+
+# The next line updates PATH for the Google Cloud SDK.
+#if [ -f "$HONE/google-cloud-sdk/path.bash.inc" ]; then 
+source "$HOME/google-cloud-sdk/path.bash.inc"
+#; fi
+
+# The next line enables shell command completion for gcloud.
+#if [ -f "$HOME/google-cloud-sdk/completion.bash.inc" ]; then 
+source "$HOME/google-cloud-sdk/completion.bash.inc"
+#; fi

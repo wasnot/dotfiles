@@ -19,6 +19,8 @@ for f in .??*; do
     ln -snfv ~/dotfiles/"$f" ~/
 done
 
+defaults write com.apple.finder AppleShowAllFiles TRUE
+
 cat << END
 
 **************************************************
