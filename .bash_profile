@@ -53,6 +53,8 @@ ssh-add -K $HOME/.ssh/wasnot/id_rsa 2>/dev/null
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
+# appengine
+export PATH="$HOME/google-cloud-sdk/platform/google_appengine:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
 #if [ -f "$HONE/google-cloud-sdk/path.bash.inc" ]; then 
