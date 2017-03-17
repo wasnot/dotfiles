@@ -26,6 +26,7 @@ formulas=(
     peco
     tig
     readline
+    colordiff
 #    jenv
 #    node
     pyenv

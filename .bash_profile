@@ -12,6 +12,13 @@ export STUDIO_JDK=${JAVA_HOME%/*/*}
 source ~/.git-completion.bash
 source ~/.git-prompt.sh
 
+# colordiff
+if [[ -x `which colordiff` ]]; then
+  alias diff='colordiff -u'
+else
+  alias diff='diff -u'
+fi
+
 # pyenv
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
