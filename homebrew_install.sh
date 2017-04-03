@@ -27,6 +27,7 @@ formulas=(
     tig
     readline
     colordiff
+    jq
 #    jenv
 #    node
     pyenv
@@ -74,6 +75,7 @@ casks=(
     google-drive
     toggldesktop
     hyperswitch
+    clipy
 
 #    slack
     skype

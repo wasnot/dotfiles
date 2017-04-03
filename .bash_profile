@@ -4,6 +4,7 @@ export PATH=$PATH:/Applications/adt/android-ndk-r11c
 export PATH=$PATH:/Applications/adt/android-sdk-macosx/build-tools/22.0.1
 export JAVA_HOME=$(/usr/libexec/java_home)
 export STUDIO_JDK=${JAVA_HOME%/*/*}
+export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools:$HOME/Library/Android/sdk/tools:$HOME/Library/Android/sdk/build-tools/22.0.1"
 
 # added by Anaconda3 2.3.0 installer
 #export PATH="$HOME/anaconda/bin:$PATH"
@@ -72,3 +73,5 @@ source "$HOME/google-cloud-sdk/path.bash.inc"
 #if [ -f "$HOME/google-cloud-sdk/completion.bash.inc" ]; then 
 source "$HOME/google-cloud-sdk/completion.bash.inc"
 #; fi
+
+exec fish
