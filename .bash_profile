@@ -56,6 +56,7 @@ ssh-add -K $HOME/.ssh/gitlab/id_rsa 2>/dev/null
 ssh-add -K $HOME/.ssh/google_compute_engine 2>/dev/null
 ssh-add -K $HOME/.ssh/sensy/id_rsa 2>/dev/null
 ssh-add -K $HOME/.ssh/wasnot/id_rsa 2>/dev/null
+ssh-add -K $HOME/.ssh/google_compute_engine
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
