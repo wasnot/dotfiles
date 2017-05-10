@@ -49,6 +49,7 @@ formulas=(
     hub
     gibo
     gcsfuse
+    fish
 )
 
 "brew tap..."
