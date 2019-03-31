@@ -74,5 +74,6 @@ source "$HOME/google-cloud-sdk/path.bash.inc"
 #if [ -f "$HOME/google-cloud-sdk/completion.bash.inc" ]; then 
 source "$HOME/google-cloud-sdk/completion.bash.inc"
 #; fi
+export CLOUDSDK_PYTHON_SITEPACKAGES=1
 
 exec fish
