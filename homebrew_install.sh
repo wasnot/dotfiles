@@ -77,6 +77,8 @@ casks=(
     toggldesktop
     hyperswitch
     clipy
+    fluid
+    mounty
 
 #    slack
     skype
