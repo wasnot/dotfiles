@@ -78,7 +78,7 @@ casks=(
     hyperswitch
     clipy
     fluid
-    mounty
+#    mounty
 
 #    slack
     skype
