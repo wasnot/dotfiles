@@ -20,6 +20,7 @@ for f in .??*; do
 done
 
 defaults write com.apple.finder AppleShowAllFiles TRUE
+killall Finder
 
 cat << END
 

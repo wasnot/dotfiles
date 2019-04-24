@@ -1,8 +1,12 @@
 #!/bin/bash
 
 # nvm
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
-source ~/.bash_profile
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+
+#source ~/.bash_profile
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 latest=`nvm ls-remote | grep -v - | tail -n 1`
 nvm install ${latest}
 

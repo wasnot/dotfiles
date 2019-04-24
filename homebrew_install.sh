@@ -50,6 +50,7 @@ formulas=(
     gibo
     gcsfuse
     fish
+    fzf
 )
 
 "brew tap..."
@@ -73,18 +74,18 @@ casks=(
     google-chrome
     firefox
     appcleaner
-    google-drive
+#    google-drive
     toggldesktop
     hyperswitch
     clipy
-    fluid
+#    fluid
 #    mounty
 
 #    slack
-    skype
-    zeplin
+#    skype
+#    zeplin
 
-    atom
+#    atom
     iterm2
     visual-studio-code
     virtualbox
@@ -96,8 +97,8 @@ casks=(
     genymotion
 
     pycharm-ce
-    googleappengine
-    gogland-eap
+#    googleappengine
+#    gogland-eap
     osxfuse
 )
 
