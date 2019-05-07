@@ -10,5 +10,7 @@ pod setup
 #sudo gem install update_xcode_plugins
 #update_xcode_plugins --unsign
 
+gem install bundler
+
 echo "end!"
 

@@ -9,3 +9,6 @@ if which colordiff
 set -x PATH $HOME/.pyenv/bin $PATH
 . (pyenv init - | psub)
 
+# rbenv
+status --is-interactive; and source (rbenv init -|psub)
+
