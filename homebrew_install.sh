@@ -51,6 +51,7 @@ formulas=(
     gcsfuse
     fish
     fzf
+    cmake
 )
 
 "brew tap..."
