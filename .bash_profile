@@ -41,8 +41,10 @@ eval "$(rbenv init -)"
 #PATH=${JAVA_HOME}/bin:${PATH}
 
 # jEnv
-#export PATH="$HOME/.jenv/bin:$PATH"
-#eval "$(jenv init -)"
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+export JENV_ROOT=/usr/local/opt/jenv
 
 # swiftenv
 if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
