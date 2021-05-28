@@ -50,6 +50,7 @@ formulas=(
     gibo
     gcsfuse
     fish
+    fnm
     fzf
     cmake
 )
