@@ -33,6 +33,9 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source /usr/local/bin/virtualenvwrapper.sh
 fi
 
+# poetry
+export PATH="$HOME/.local/bin:$PATH"
+
 # rbenv
 eval "$(rbenv init -)"
 
@@ -70,6 +73,14 @@ ssh-add -K $HOME/.ssh/google_compute_engine
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # fnm
 eval "$(fnm env)"
+
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
+export DPRINT_INSTALL="$HOME/.dprint"
+export PATH="$DPRINT_INSTALL/bin:$PATH"
 
 # go
 export GOPATH=$HOME/go
@@ -116,7 +127,11 @@ if [ -f '~/google-cloud-sdk/path.bash.inc' ]; then . '~/google-cloud-sdk/path.ba
 # The next line enables shell command completion for gcloud.
 if [ -f '~/google-cloud-sdk/completion.bash.inc' ]; then . '~/google-cloud-sdk/completion.bash.inc'; fi
 
+# Rust
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# FlutterFire
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 
 exec fish
