@@ -9,14 +9,16 @@ cd $THIS_DIR
 git submodule init
 git submodule update
 
+# .始まりのファイルをsymlink
 echo "start setup..."
 for f in .??*; do
     [ "$f" = ".git" ] && continue
     [ "$f" = ".gitconfig.local.template" ] && continue
     [ "$f" = ".require_oh-my-zsh" ] && continue
     [ "$f" = ".gitmodules" ] && continue
+    [ "$f" = ".gitignore" ] && continue
 
-    ln -snfv ~/dotfiles/"$f" ~/
+    ln -snfv "$THIS_DIR/$f" ~
 done
 
 defaults write com.apple.finder AppleShowAllFiles TRUE

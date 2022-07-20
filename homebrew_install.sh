@@ -14,7 +14,7 @@ which brew >/dev/null 2>&1 && brew update
 
 echo "ok. run brew upgrade..."
 
-brew upgrade --all
+brew upgrade # --all
 
 formulas=(
     git
@@ -28,46 +28,35 @@ formulas=(
     readline
     colordiff
     jq
-#    jenv
-#    node
-    pyenv
-    pyenv-virtualenv
-    pyenv-virtualenvwrapper
-#    python
-#    python3
-    numpy
-    opencv
-    opencv3
-    rbenv
-    ruby-build
-#    swiftenv
-    swiftlint
-    carthage
-    go
-    mysql
-    sqlite
-    hub
-    gibo
-    gcsfuse
     fish
     fnm
     fzf
-    cmake
 )
 
-"brew tap..."
-#brew tap homebrew/dupes
-#brew tap homebrew/versions
-#brew tap homebrew/homebrew-php
-#brew tap homebrew/apache
-#brew tap sanemat/font
-brew tap homebrew/science
-brew tap homebrew/fuse
-
-echo "start brew install apps..."
-for formula in "${formulas[@]}"; do
-    brew install $formula || brew upgrade $formula
-done
+optional=(
+#    jenv
+##    node
+#    pyenv
+#    pyenv-virtualenv
+#    pyenv-virtualenvwrapper
+##    python
+##    python3
+#    numpy
+#    opencv
+#    opencv3
+#    rbenv
+#    ruby-build
+#    swiftenv
+#    swiftlint
+#    carthage
+#    go
+#    mysql
+#    sqlite
+#    hub
+#    gibo
+#    gcsfuse
+#    cmake
+)
 
 casks=(
     dropbox
@@ -77,7 +66,7 @@ casks=(
     firefox
     appcleaner
 #    google-drive
-    toggldesktop
+    toggl-track
     hyperswitch
     clipy
 #    fluid
@@ -88,29 +77,43 @@ casks=(
 #    zeplin
 
 #    atom
-    iterm2
+#    iterm2
     visual-studio-code
-    virtualbox
+#    virtualbox
     docker    
-    sequel-pro
+#    sequel-pro
 
-    java
+#    java
     android-studio
-    genymotion
+#    genymotion
 
-    pycharm-ce
+#    pycharm-ce
 #    googleappengine
 #    gogland-eap
-    osxfuse
+#    osxfuse
 )
+
+#"brew tap..."
+#brew tap homebrew/dupes
+#brew tap homebrew/versions
+#brew tap homebrew/homebrew-php
+#brew tap homebrew/apache
+#brew tap sanemat/font
+#brew tap homebrew/science
+#brew tap homebrew/fuse
+
+echo "start brew install apps..."
+for formula in "${formulas[@]}"; do
+    brew install $formula || brew upgrade $formula
+done
 
 echo "start brew cask install apps..."
 for cask in "${casks[@]}"; do
-    brew cask install $cask
+    brew install $cask
 done
 
 brew cleanup
-brew cask cleanup
+#brew cask cleanup
 
 cat << END
 
