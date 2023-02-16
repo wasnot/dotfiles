@@ -44,8 +44,8 @@ eval "$(rbenv init -)"
 #PATH=${JAVA_HOME}/bin:${PATH}
 
 # # jEnv
-# export PATH="$HOME/.jenv/bin:$PATH"
-# eval "$(jenv init -)"
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 # export JENV_ROOT=/usr/local/opt/jenv
 # if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 # export JAVA_HOME=$(/usr/libexec/java_home -v 11)
@@ -113,11 +113,18 @@ export COCOS_TEMPLATES_ROOT=~/Documents/cocos2d-x-3.17.1/templates
 export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 
 # Add environment variable ANDROID_SDK_ROOT for cocos2d-x
-export ANDROID_SDK_ROOT="~/Library/Android/sdk"
+export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 export PATH=$ANDROID_SDK_ROOT:$PATH
 export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
 
+# cordova
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
+export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin/
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator/
+
+# flutter
 export PATH=$PATH:$HOME/flutter/bin
+export PATH=$PATH:$HOME/fvm/default/bin
 
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -132,6 +139,11 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # FlutterFire
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 
+# Docker for m1 mac
+ARCH=$(uname -m)
+if [ $ARCH = "arm64" ]; then
+  export DEVELOP_DOCKER_FILE=develop.m1.Dockerfile
+fi
 
 exec fish
 

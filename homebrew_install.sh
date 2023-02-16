@@ -67,7 +67,8 @@ casks=(
     appcleaner
 #    google-drive
     toggl-track
-    hyperswitch
+    # hyperswitch
+    alt-tab
     clipy
 #    fluid
 #    mounty

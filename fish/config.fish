@@ -18,4 +18,4 @@ status --is-interactive; and source (rbenv init -|psub)
 # status --is-interactive; and source (jenv init -|psub)
 
 # ios
-alias clean-deriverd="rm -rf '~/Library/Developer/Xcode/DerivedData/*'"
+alias clean-deriverd="rm -rf ~/Library/Developer/Xcode/DerivedData/*"
