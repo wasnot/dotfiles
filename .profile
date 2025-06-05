@@ -37,7 +37,7 @@ fi
 export PATH="$HOME/.local/bin:$PATH"
 
 # rbenv
-eval "$(rbenv init -)"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # java_home
 #export JAVA_HOME=`/System/Library/Frameworks/JavaVM.framework/Versions/A/Commands/java_home -v "1.6"`
@@ -71,7 +71,7 @@ ssh-add --apple-use-keychain $HOME/.ssh/wasnot/id_rsa 2>/dev/null
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # fnm
-eval "$(fnm env)"
+if which fnm > /dev/null; then eval "$(fnm env)"; fi
 
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"

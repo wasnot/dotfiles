@@ -4,7 +4,9 @@
 xcode-select --install
 
 echo "installing homebrew..."
-which brew >/dev/null 2>&1 || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#which brew >/dev/null 2>&1 || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+which brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 echo "run brew doctor..."
 which brew >/dev/null 2>&1 && brew doctor
@@ -23,14 +25,16 @@ formulas=(
     tree
     openssl
     cask
-    peco
-    tig
-    readline
-    colordiff
+    # peco
+    # tig
+    # readline
+    # colordiff
     jq
     fish
     fnm
     fzf
+    ghq
+    rbenv
 )
 
 optional=(
@@ -81,11 +85,11 @@ casks=(
 #    iterm2
     visual-studio-code
 #    virtualbox
-    docker    
+    # docker    
 #    sequel-pro
 
 #    java
-    android-studio
+    # android-studio
 #    genymotion
 
 #    pycharm-ce
