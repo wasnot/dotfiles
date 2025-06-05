@@ -134,7 +134,7 @@ if [ -f '~/google-cloud-sdk/path.bash.inc' ]; then . '~/google-cloud-sdk/path.ba
 if [ -f '~/google-cloud-sdk/completion.bash.inc' ]; then . '~/google-cloud-sdk/completion.bash.inc'; fi
 
 # Rust
-export PATH="$HOME/.cargo/bin:$PATH"
+. "$HOME/.cargo/env"
 
 # FlutterFire
 export PATH="$PATH":"$HOME/.pub-cache/bin"
@@ -146,4 +146,3 @@ if [ $ARCH = "arm64" ]; then
 fi
 
 exec fish
-

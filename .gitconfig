@@ -13,3 +13,5 @@
 	pull-force = ! git fetch && git reset --hard origin/$(git current)
 [core]
 	editor = vim
+[init]
+	defaultBranch = main

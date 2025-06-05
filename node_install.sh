@@ -13,6 +13,6 @@
 
 # fnm
 fnm completions --shell fish
-echo "fnm env | source" > ~/.config/fish/conf.d/fnm.fish
+echo "fnm env --use-on-cd | source" > ~/.config/fish/conf.d/fnm.fish
 
 echo "end!"
