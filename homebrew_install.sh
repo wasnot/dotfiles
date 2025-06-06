@@ -35,6 +35,8 @@ formulas=(
     fzf
     ghq
     rbenv
+    
+    orbstack
 )
 
 optional=(
@@ -67,15 +69,17 @@ casks=(
 #    evernote
 #    skitch
     google-chrome
+    google-cloud-sdk
     firefox
     appcleaner
 #    google-drive
-    toggl-track
+    # toggl-track
     # hyperswitch
     alt-tab
     clipy
 #    fluid
 #    mounty
+    jasper
 
 #    slack
 #    skype

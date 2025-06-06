@@ -134,7 +134,7 @@ if [ -f '~/google-cloud-sdk/path.bash.inc' ]; then . '~/google-cloud-sdk/path.ba
 if [ -f '~/google-cloud-sdk/completion.bash.inc' ]; then . '~/google-cloud-sdk/completion.bash.inc'; fi
 
 # Rust
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 
 # FlutterFire
 export PATH="$PATH":"$HOME/.pub-cache/bin"
@@ -144,5 +144,8 @@ ARCH=$(uname -m)
 if [ $ARCH = "arm64" ]; then
   export DEVELOP_DOCKER_FILE=develop.m1.Dockerfile
 fi
+
+# Add Visual Studio Code (code)
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 exec fish
